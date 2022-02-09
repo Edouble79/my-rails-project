@@ -1,6 +1,6 @@
 # app/models/author.rb
 class Author < ApplicationRecord
-  # ... relations and validations ...
+  has_many :books
 
   def first_published
     books_with_year = self.books.where.not(publication_date: nil)
